@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    name-tamer (0.1.2)
+    contact-data (0.0.0)
+      rest-client (~> 1)
 
 GEM
   remote: https://rubygems.org/
@@ -41,9 +42,9 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1)
+  contact-data!
   coveralls (~> 0)
   gem-release (~> 0)
-  name-tamer!
   rake (~> 10)
   rspec (~> 2)
   simplecov (~> 0.7, >= 0.7.1)
