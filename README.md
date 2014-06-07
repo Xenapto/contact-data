@@ -2,7 +2,7 @@
 
 ![Gem Version](http://img.shields.io/gem/v/contact-data.svg?style=flat)&nbsp;[![Coverage Status](https://img.shields.io/coveralls/Xenapto/contact-data.svg?style=flat)](https://coveralls.io/r/Xenapto/contact-data?branch=master)
 [![Developer status](http://img.shields.io/badge/developer-awesome-brightgreen.svg?style=flat)](http://xenapto.com)
-![build status](https://circleci.com/gh/Xenapto/contact-data.png?circle-token=2293f2a1d8463a948c2a2ce4bb3bd99786958c59)
+![build status](https://circleci.com/gh/Xenapto/contact-data.png?circle-token=4c6f3dcc1912d30c8d903ae767f0beee94d9b4e2)
 
 Retrieves information about people and organizations from http://public.xenapto.com
 
