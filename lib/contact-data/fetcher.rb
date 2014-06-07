@@ -16,6 +16,8 @@ puts url # debug
       def get_url_from(api_method, options = {})
         if api_method.is_a?(String)
           URI.escape("#{URL}/#{api_method}")
+        elsif options[:base]
+          "#{URL}/#{API}/#{options[:base]}/#{api_method}"
         else
           "#{URL}/#{API}/#{api_method}"
         end
