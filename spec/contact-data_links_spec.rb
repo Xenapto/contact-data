@@ -5,6 +5,6 @@ require 'contact-data'
 describe ContactData::Links do
   it 'gets latest links with related slug' do
     result = ContactData::Links.latest
-    expect(result).to be_a(String)
+    expect(result).to be_an(Array)
   end
 end

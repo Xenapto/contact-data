@@ -5,22 +5,48 @@ class ContactData
     API = 'api/v2'
 
     class << self
-      def get(api_method, options = {})
-        url = get_url_from(api_method, options)
-puts url # debug
-        RestClient.get url, options[:params]
+      [:get, :post].each do |http_method|
+        define_method(http_method) do |api_method, options = {}|
+puts options # debug
+          url = get_url_from(api_method, options)
+          fetch_and_parse url, http_method, options
+        end
       end
 
       private
 
       def get_url_from(api_method, options = {})
         if api_method.is_a?(String)
-          URI.escape("#{URL}/#{api_method}")
+          url = URI.escape("#{URL}/#{api_method}")
         elsif options[:base]
-          "#{URL}/#{API}/#{options[:base]}/#{api_method}"
+          url = "#{URL}/#{API}/#{options[:base]}/#{api_method}"
         else
-          "#{URL}/#{API}/#{api_method}"
+          url = "#{URL}/#{API}/#{api_method}"
         end
+
+        if options[:noformat]
+          url
+        else
+          format = options[:format] || :json
+          "#{url}.#{format}"
+        end
+      end
+
+      def fetch_and_parse(url, method = :get, options = {})
+        json = fetch(url, method, options)
+        parse json
+      end
+
+      def fetch(url, method = :get, options = {})
+        args = { url: url, method: method }
+        args[:headers] = { params: options[:params] } if options.key? :params
+        args[:payload] = options[:payload] if options.key? :payload
+puts args # setup
+        RestClient::Request.new(args).execute
+      end
+
+      def parse(json)
+        JSON.parse(json, symbolize_names: true, allow_nan: true)
       end
     end
   end
