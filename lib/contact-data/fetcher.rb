@@ -1,5 +1,6 @@
 # encoding: utf-8
 class ContactData
+  # Interaction with the data layer
   class Fetcher
     URL = 'http://public.xenapto.com'
     API = 'api/v2'

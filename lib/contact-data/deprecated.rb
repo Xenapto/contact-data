@@ -1,5 +1,6 @@
 # encoding: utf-8
 class ContactData
+  # Deprecated methods
   class Deprecated
     class << self
       def search(name)
@@ -7,11 +8,11 @@ class ContactData
       end
 
       def find_contacts_in(text)
-        Fetcher.post('text/find_contacts', payload: {text: text})
+        Fetcher.post('text/find_contacts', payload: { text: text })
       end
 
       def link_metadata(url)
-        Fetcher.get("link/#{CGI::escape(url)}", :noformat => true)
+        Fetcher.get("link/#{CGI.escape(url)}", noformat: true)
       end
     end
   end

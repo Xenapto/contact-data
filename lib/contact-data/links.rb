@@ -1,5 +1,6 @@
 # encoding: utf-8
 class ContactData
+  # Link methods
   class Links
     BASE = :links
 

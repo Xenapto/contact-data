@@ -19,7 +19,6 @@ describe ContactData::Deprecated do
   it 'finds information about a url' do
     url = 'http://www.iana.org/numbers'
     result = ContactData::Deprecated.link_metadata(url)
-puts result # debug
     expect(result).to be_a(Hash)
   end
 end
