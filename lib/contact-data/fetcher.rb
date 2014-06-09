@@ -7,7 +7,6 @@ class ContactData
     class << self
       [:get, :post].each do |http_method|
         define_method(http_method) do |api_method, options = {}|
-puts options # debug
           url = get_url_from(api_method, options)
           fetch_and_parse url, http_method, options
         end
@@ -41,7 +40,6 @@ puts options # debug
         args = { url: url, method: method }
         args[:headers] = { params: options[:params] } if options.key? :params
         args[:payload] = options[:payload] if options.key? :payload
-puts args # setup
         RestClient::Request.new(args).execute
       end
 
