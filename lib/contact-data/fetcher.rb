@@ -1,15 +1,19 @@
 # encoding: utf-8
-class ContactData
-  # Interaction with the data layer
+module ContactData
   class Fetcher
     URL = 'http://public.xenapto.com'
     API = 'api/v2'
 
+    LOGLEVEL = Logger::WARN
+
     class << self
       [:get, :post].each do |http_method|
         define_method(http_method) do |api_method, options = {}|
+          log_level(options)
           url = get_url_from(api_method, options)
-          fetch_and_parse url, http_method, options
+          result = fetch_and_parse url, http_method, options
+          log_level(LOGLEVEL)
+          result
         end
       end
 
@@ -34,10 +38,12 @@ class ContactData
 
       def fetch_and_parse(url, method = :get, options = {})
         json = fetch(url, method, options)
+        logger.info { "Parsing #{json.length} characters of JSON" }
         parse json
       end
 
       def fetch(url, method = :get, options = {})
+        logger.info { "Using #{method.to_s.upcase} for #{url}" }
         args = { url: url, method: method }
         args[:headers] = { params: options[:params] } if options.key? :params
         args[:payload] = options[:payload] if options.key? :payload
@@ -46,6 +52,18 @@ class ContactData
 
       def parse(json)
         JSON.parse(json, symbolize_names: true, allow_nan: true)
+      end
+
+      def logger
+        @logger ||= Logger.new(STDOUT)
+      end
+
+      def log_level(options = {})
+        logger.level =  if options.is_a?(Hash)
+                          options[:verbose] ? Logger::INFO : LOGLEVEL
+                        else
+                          options
+                        end
       end
     end
   end

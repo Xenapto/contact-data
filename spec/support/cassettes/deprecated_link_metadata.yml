@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://public.xenapto.com/link/http%253A%252F%252Fwww.iana.org%252Fnumbers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Jun 2014 10:59:29 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '304'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"1f393c600ab5ec1775f8dd15075384a5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a40aa477aa382d214fa9e0b0ccc5c459
+      X-Runtime:
+      - '0.111311'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"id":1703498,"source":"API","source_contact_id":0,"url":"http%3a%2f%2fwww.iana.org/numbers","domain":"iana.org","title":null,"news_source":"Internet
+        Assigned Numbers Authority","summary":null,"created_at":"2014-06-08T10:24:59Z","updated_at":"2014-06-08T10:24:59Z","publication_date":null,"version":"v1"}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 10:59:29 GMT
+recorded_with: VCR 2.9.2

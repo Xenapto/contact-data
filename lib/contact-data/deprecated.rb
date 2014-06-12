@@ -1,6 +1,5 @@
 # encoding: utf-8
-class ContactData
-  # Deprecated methods
+module ContactData
   class Deprecated
     class << self
       def search(name)

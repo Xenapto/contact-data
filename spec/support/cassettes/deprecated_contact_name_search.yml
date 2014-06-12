@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://public.xenapto.com/text/find_contacts.json
+    body:
+      encoding: US-ASCII
+      string: text=lorem%20ipsum%20john%20smith%20dolor%20sit%20amet
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '54'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Jun 2014 10:59:28 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '82'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"9251905d056c3fe9e82e21beca343642"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _xendata_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWVhYmNlOTZjM2QyODcwM2UyNzFlMmNiNGRkMGI2Y2I5BjsAVA%3D%3D--8e1aa6c22b16cb0bd337cff3b47eb626b7471410;
+        path=/; HttpOnly
+      X-Request-Id:
+      - e3b51f6551e990a0aa31307b47d6b00f
+      X-Runtime:
+      - '0.373982'
+      X-Rack-Cache:
+      - invalidate, pass
+    body:
+      encoding: UTF-8
+      string: '{"contacts":["lorem-ipsum","john-smith"],"mentions":[],"emails":[],"version":"v1"}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 10:59:29 GMT
+recorded_with: VCR 2.9.2

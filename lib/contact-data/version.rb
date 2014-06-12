@@ -1,4 +1,4 @@
 # Gem version
-class ContactData
+module ContactData
   VERSION = '0.0.5'
 end

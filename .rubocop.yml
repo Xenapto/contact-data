@@ -10,3 +10,7 @@ FileName:
 MethodLength:
   Description: 'Avoid methods longer than 10 lines of code.'
   Enabled: false
+
+Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false

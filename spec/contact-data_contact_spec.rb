@@ -6,6 +6,8 @@ describe ContactData do
   let(:name) { 'Derek Jones III' }
 
   it 'searches for a contact by name' do
-    expect { ContactData.search(name) }.to raise_error(RestClient::ResourceNotFound)
+    VCR.use_cassette('name_search') do
+      expect { ContactData::Contact.search(name, verbose: true) }.to raise_error(RestClient::ResourceNotFound)
+    end
   end
 end
