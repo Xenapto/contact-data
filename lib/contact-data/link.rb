@@ -21,6 +21,8 @@ module ContactData
       def options_from(params = {})
         options = { base: BASE }
 
+        params = { url: params } if params.is_a? String
+
         options[:verbose] = params.delete(:verbose) if params.key? :verbose
         options[:params]  = params unless params.empty?
         options

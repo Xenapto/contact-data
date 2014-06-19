@@ -2,7 +2,7 @@
 require 'spec_helper'
 require 'contact-data'
 
-describe ContactData do
+describe ContactData::Contact do
   let(:name) { 'Derek Jones III' }
 
   it 'searches for a contact by name' do
