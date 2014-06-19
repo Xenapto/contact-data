@@ -1,4 +1,6 @@
 # encoding: utf-8
+require 'rest-client'
+
 module ContactData
   class Fetcher
     URL = 'http://public.xenapto.com'
