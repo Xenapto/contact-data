@@ -31,7 +31,7 @@ ContactData.search 'John Smith III'
 Or you can create an instance if you need to call it several times
 
 ```ruby
-contact_data = ContactData.new
+contact_data = ContactData::Contact.new
 
 ['John Smith', 'Example Inc.', 'Crazy Ventures LLC'].each do |name|
   contact_data.search name
@@ -41,7 +41,7 @@ end
 ContactData will make an intelligent guess at the type of the name but it's not infallible. ContactData likes it if you tell it whether the name is a person or an organization:
 
 ```ruby
-contact_data = ContactData.new 'Di Doo Doo d.o.o.', contact_type: :organization
+contact_data = ContactData::Contact.new 'Di Doo Doo d.o.o.', contact_type: :organization
 contact_data.search
 ```
 
