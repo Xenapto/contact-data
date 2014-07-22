@@ -4,6 +4,7 @@ module ContactData
     class << self
       def search(name, options = {})
         options[:params] = { name: name }
+        options[:timeout] ||= 90 # seconds
         Fetcher.get(:search, options)
       end
     end
