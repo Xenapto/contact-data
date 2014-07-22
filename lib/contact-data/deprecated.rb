@@ -7,7 +7,7 @@ module ContactData
       end
 
       def find_contacts_in(text)
-        Fetcher.post('text/find_contacts', payload: { text: text })
+        Fetcher.post('text/find_contacts', payload: { text: text }, timeout: 90)
       end
 
       def link_metadata(url)
