@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = ContactData::VERSION
   spec.authors       = ['Xenapto']
   spec.email         = ['developers@xenapto.com']
-  spec.description   = %q(A Ruby gem to retrieve data about people and organizations from http://public.xenapto.com)
-  spec.summary       = %q{Example: ContactData.search('John Smith III')}
+  spec.description   = 'A Ruby gem to retrieve data about people and organizations from http://public.xenapto.com'
+  spec.summary       = "Example: ContactData.search('John Smith III')"
   spec.homepage      = 'https://github.com/Xenapto/contact-data'
   spec.license       = 'MIT'
 

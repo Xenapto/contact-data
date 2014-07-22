@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'URI'
+require 'uri'
 require 'json'
 require 'logger'
 require 'contact-data/contact'
