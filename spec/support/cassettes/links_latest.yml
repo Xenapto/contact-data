@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://public.xenapto.com/api/v2/links/latest.json?since=2014-07-28%2012:06:36%20%2B0100&timeout=1800
+    uri: http://public.xenapto.com/api/v2/links/latest.json?since=2014-07-28%2012:09:48%20%2B0100&timeout=1800
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 29 Jul 2014 11:07:24 GMT
+      - Tue, 29 Jul 2014 11:10:35 GMT
       Status:
       - 200 OK
       Connection:
@@ -35,9 +35,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 89cae2c9c2772efa252ceccd0d883afb
+      - da54363cb5b30db0352f54f28c0304c9
       X-Runtime:
-      - '44.792496'
+      - '42.291614'
       X-Rack-Cache:
       - miss
     body:
@@ -2056,5 +2056,5 @@ http_interactions:
         Communications Closes $10 Million Venture Capital Round to Fuel Growth in
         Next Generation Video Markets","updated_at":"2014-07-29T08:32:47Z","url":"http://www.freshnews.com/news/314533/imagine-communications-closes-10-million-venture-capital-round-fuel-growth-next-generati"}]'
     http_version: 
-  recorded_at: Tue, 29 Jul 2014 11:07:22 GMT
+  recorded_at: Tue, 29 Jul 2014 11:10:32 GMT
 recorded_with: VCR 2.9.2
