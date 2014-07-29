@@ -7,7 +7,7 @@ describe ContactData::Link do
 
   it 'gets latest links with related slug' do
     VCR.use_cassette('links_latest') do
-      result = ContactData::Link.latest verbose: true
+      result = ContactData::Link.latest verbose: true, since: Time.now - (1 * 60 * 60 * 24)
       expect(result).to be_an(Array)
     end
   end
