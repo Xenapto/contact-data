@@ -5,6 +5,7 @@ module ContactData
 
     class << self
       def latest(params = {})
+        params.merge(timeout: 1800) unless params[:timeout]
         Fetcher.get :latest, options_from(params)
       end
 
