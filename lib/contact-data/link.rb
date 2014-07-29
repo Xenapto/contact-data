@@ -14,7 +14,7 @@ module ContactData
       end
 
       def search(params = {})
-        Fetcher.get :search, options_from(params).merge(timeout: 1800)
+        Fetcher.get :search, options_from(params)
       end
 
       private
