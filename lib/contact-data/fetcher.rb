@@ -56,7 +56,8 @@ module ContactData
           :ssl_ca_path, :ssl_cert_store, :ssl_verify_callback,
           :ssl_verify_callback_warnings, :ssl_version, :ssl_ciphers
         ].each { |key| args[key] = options[key] if options.key? key }
-        RestClient::Request.new(args.merge(timeout: 1800)).execute
+
+        RestClient::Request.new(args).execute
       end
 
       def parse(json)
