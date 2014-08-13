@@ -3,7 +3,7 @@ module ContactData
   class Deprecated
     class << self
       def search(name)
-        Fetcher.get("name/#{name}")
+        Fetcher.get("name/#{CGI.escape(name)}")
       end
 
       def find_contacts_in(text)

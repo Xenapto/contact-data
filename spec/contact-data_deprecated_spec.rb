@@ -4,11 +4,19 @@ require 'contact-data'
 
 describe ContactData::Deprecated do
   let(:name) { 'Derek Jones III' }
+  let(:name_xml_bug) { 'XXXXXXXXXX ?' }
 
   context 'contact' do
     it 'searches by name' do
       VCR.use_cassette('deprecated_contact_search') do
         result = ContactData::Deprecated.search(name)
+        expect(result).to be_a(Hash)
+      end
+    end
+
+    it 'searches successfully with name that gave XML bug' do
+      VCR.use_cassette('deprecated_contact_search') do
+        result = ContactData::Deprecated.search(name_xml_bug)
         expect(result).to be_a(Hash)
       end
     end
