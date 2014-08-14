@@ -19,11 +19,15 @@ module ContactData
         end
       end
 
+      def encode_component(string)
+        Addressable::URI.encode_component(string, Addressable::URI::CharacterClasses::PATH)
+      end
+
       private
 
       def get_url_from(api_method, options = {})
         if api_method.is_a?(String)
-          url = URI.escape("#{URL}/#{api_method}")
+          url = "#{URL}/#{api_method}"
         elsif options[:base]
           url = "#{URL}/#{API}/#{options[:base]}/#{api_method}"
         else

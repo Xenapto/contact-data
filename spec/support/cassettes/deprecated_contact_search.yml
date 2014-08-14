@@ -78,7 +78,7 @@ http_interactions:
   recorded_at: Thu, 12 Jun 2014 10:53:38 GMT
 - request:
     method: get
-    uri: http://public.xenapto.com/name/XXXXX+%253F.json
+    uri: http://public.xenapto.com/name/XXXXXXXXXX%20%3F.json
     body:
       encoding: US-ASCII
       string: ''
@@ -95,7 +95,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 13 Aug 2014 16:33:29 GMT
+      - Thu, 14 Aug 2014 11:01:50 GMT
       Status:
       - 200 OK
       Connection:
@@ -107,108 +107,18 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - '"50cd64a593ffbd41a6f90d88fafde183"'
+      - '"dfc3ae65d751e2a767eeafc22ea049a1"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 296e310ed791fbad627564e461951566
+      - 715767cc28016598d996a86e9dc15446
       X-Runtime:
-      - '0.032884'
+      - '0.025084'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
-      string: '{"contacts":[],"name":"Not found","slug":"xxxxx-plus","count":0,"version":"v1"}'
+      string: '{"contacts":[],"name":"Not found","slug":"xxxxxxxxxx","count":0,"version":"v1"}'
     http_version: 
-  recorded_at: Wed, 13 Aug 2014 16:33:29 GMT
-- request:
-    method: get
-    uri: http://public.xenapto.com/name/XXXXXXXXXX+%253F.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 13 Aug 2014 16:35:55 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '84'
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - '"253398129d504e94f0911f40498f71b1"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7df57910c30b2c48aba43d05f6288798
-      X-Runtime:
-      - '0.044715'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: '{"contacts":[],"name":"Not found","slug":"xxxxxxxxxx-plus","count":0,"version":"v1"}'
-    http_version: 
-  recorded_at: Wed, 13 Aug 2014 16:35:55 GMT
-- request:
-    method: get
-    uri: http://public.xenapto.com/name/Derek+Jones+III.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 13 Aug 2014 16:35:55 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '94'
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - '"5e7d9fa614dc656a150e4fdca993850e"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4569407b925ec6da38345e3e4eac86cb
-      X-Runtime:
-      - '0.058324'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: '{"contacts":[],"name":"Not found","slug":"derek-plus-jones-plus-iii","count":0,"version":"v1"}'
-    http_version: 
-  recorded_at: Wed, 13 Aug 2014 16:35:55 GMT
+  recorded_at: Thu, 14 Aug 2014 11:01:50 GMT
 recorded_with: VCR 2.9.2

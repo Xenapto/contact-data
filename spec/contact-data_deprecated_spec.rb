@@ -11,6 +11,7 @@ describe ContactData::Deprecated do
       VCR.use_cassette('deprecated_contact_search') do
         result = ContactData::Deprecated.search(name)
         expect(result).to be_a(Hash)
+        expect(result[:count]).to eq(10)
       end
     end
 
@@ -29,6 +30,7 @@ describe ContactData::Deprecated do
       VCR.use_cassette('deprecated_contact_name_search') do
         result = ContactData::Deprecated.find_contacts_in(text)
         expect(result).to be_a(Hash)
+        expect(result[:contacts]).to eq(['lorem-ipsum', 'john-smith'])
       end
     end
   end
@@ -40,6 +42,7 @@ describe ContactData::Deprecated do
       VCR.use_cassette('deprecated_link_metadata') do
         result = ContactData::Deprecated.link_metadata(url)
         expect(result).to be_a(Hash)
+        expect(result[:title]).to eq('IANA — Number Resources')
       end
     end
   end

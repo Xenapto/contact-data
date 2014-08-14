@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://public.xenapto.com/link/http%253A%252F%252Fwww.iana.org%252Fnumbers
+    uri: http://public.xenapto.com/link/http:%2F%2Fwww.iana.org%2Fnumbers
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 12 Jun 2014 10:59:29 GMT
+      - Thu, 14 Aug 2014 11:01:50 GMT
       Status:
       - 200 OK
       Connection:
@@ -27,23 +27,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '304'
+      - '324'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - '"1f393c600ab5ec1775f8dd15075384a5"'
+      - '"7dfe4d9eed07ad2ec06fffb55895e93b"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a40aa477aa382d214fa9e0b0ccc5c459
+      - ae3abdfd5f8349271ed68511dea34866
       X-Runtime:
-      - '0.111311'
+      - '0.493192'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
-      string: '{"id":1703498,"source":"API","source_contact_id":0,"url":"http%3a%2f%2fwww.iana.org/numbers","domain":"iana.org","title":null,"news_source":"Internet
-        Assigned Numbers Authority","summary":null,"created_at":"2014-06-08T10:24:59Z","updated_at":"2014-06-08T10:24:59Z","publication_date":null,"version":"v1"}'
+      string: '{"id":2642376,"source":"API","source_contact_id":0,"url":"http://www.iana.org/numbers","domain":"iana.org","title":"IANA
+        \u2014 Number Resources","news_source":"Internet Assigned Numbers Authority","summary":null,"created_at":"2014-08-14T11:01:50Z","updated_at":"2014-08-14T11:01:50Z","publication_date":null,"version":"v1"}'
     http_version: 
-  recorded_at: Thu, 12 Jun 2014 10:59:29 GMT
+  recorded_at: Thu, 14 Aug 2014 11:01:50 GMT
 recorded_with: VCR 2.9.2

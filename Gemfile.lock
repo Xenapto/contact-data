@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    contact-data (0.0.19)
+    contact-data (0.0.20)
+      addressable (~> 2.3)
       rest-client (~> 1)
 
 GEM
