@@ -15,6 +15,14 @@ describe ContactData::Deprecated do
       end
     end
 
+    it 'searches by name with a contact type' do
+      VCR.use_cassette('deprecated_contact_search') do
+        result = ContactData::Deprecated.search(name, :person)
+        expect(result).to be_a(Hash)
+        expect(result[:count]).to eq(10)
+      end
+    end
+
     it 'searches successfully with name that gave XML bug' do
       VCR.use_cassette('deprecated_contact_search') do
         result = ContactData::Deprecated.search(name_xml_bug)

@@ -2,8 +2,10 @@
 module ContactData
   class Deprecated
     class << self
-      def search(name)
-        Fetcher.get("name/#{Fetcher.encode_component name}")
+      def search(name, contact_type = nil)
+        options = {}
+        options[:params] = { contact_type: contact_type } if contact_type
+        Fetcher.get("name/#{Fetcher.encode_component name}", options)
       end
 
       def find_contacts_in(text)

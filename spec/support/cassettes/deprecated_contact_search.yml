@@ -121,4 +121,80 @@ http_interactions:
       string: '{"contacts":[],"name":"Not found","slug":"xxxxxxxxxx","count":0,"version":"v1"}'
     http_version: 
   recorded_at: Thu, 14 Aug 2014 11:01:50 GMT
+- request:
+    method: get
+    uri: http://public.xenapto.com/name/Derek%20Jones%20III.json?contact_type=person
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Aug 2014 13:52:22 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '9689'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"49d18f6af06ace2bcb7fa2dc8477327d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ccd546b652b40f063e8e7934766502e
+      X-Runtime:
+      - '0.485282'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"contacts":[{"id":11942380,"updated_at":"2014-06-12T10:16:36Z","source":"fsa","name":"Derek
+        Jones","source_slug":"729794","canonical_slug":"derek-jones","website":null,"source_id":729794,"last_fetched":"2014-06-12T10:16:33Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=729794","api_link":"/indivBasicDetails.do?sid=729794","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:29:07Z","description":"Derek
+        Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:29:07Z","url":null},{"created_at":"2013-12-12T07:29:07Z","description":"Derek
+        Jones","service":"fsa","slug":"dxj01321","updated_at":"2014-06-07T14:29:44Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=729794"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942381,"updated_at":"2014-06-12T10:16:28Z","source":"fsa","name":"Derek
+        Jones","source_slug":"267093","canonical_slug":"derek-jones","website":null,"source_id":267093,"last_fetched":"2014-06-12T10:16:25Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=267093","api_link":"/indivBasicDetails.do?sid=267093","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:46Z","description":"Derek
+        Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:46Z","url":null},{"created_at":"2013-12-12T07:28:46Z","description":"Derek
+        Jones","service":"fsa","slug":"dxj00016","updated_at":"2014-06-06T23:04:55Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=267093"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942382,"updated_at":"2014-06-12T10:16:32Z","source":"fsa","name":"Derek
+        Jones","source_slug":"490042","canonical_slug":"derek-jones","website":null,"source_id":490042,"last_fetched":"2014-06-12T10:16:29Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=490042","api_link":"/indivBasicDetails.do?sid=490042","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:57Z","description":"Derek
+        Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:57Z","url":null},{"created_at":"2013-12-12T07:28:57Z","description":"Derek
+        Jones","service":"fsa","slug":"dxj01164","updated_at":"2014-06-06T23:04:59Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=490042"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942383,"updated_at":"2014-06-12T10:16:15Z","source":"fsa","name":"Derek
+        Jones","source_slug":"282759","canonical_slug":"derek-jones","website":null,"source_id":282759,"last_fetched":"2014-06-12T10:16:12Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=282759","api_link":"/indivBasicDetails.do?sid=282759","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:47Z","description":"Derek
+        Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:47Z","url":null},{"created_at":"2013-12-12T07:28:47Z","description":"Derek
+        Jones","service":"fsa","slug":"dxj00029","updated_at":"2014-06-07T14:29:30Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=282759"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942384,"updated_at":"2014-06-12T10:16:23Z","source":"fsa","name":"Derek
+        Andrew Jones","source_slug":"368843","canonical_slug":"derek-jones","website":null,"source_id":368843,"last_fetched":"2014-06-12T10:16:21Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=368843","api_link":"/indivBasicDetails.do?sid=368843","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:51Z","description":"Derek
+        Andrew Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:51Z","url":null},{"created_at":"2013-12-12T07:28:51Z","description":"Derek
+        Andrew Jones","service":"fsa","slug":"daj01053","updated_at":"2014-06-07T14:29:38Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=368843"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942385,"updated_at":"2014-06-12T10:16:19Z","source":"fsa","name":"Derek
+        John Jones","source_slug":"360573","canonical_slug":"derek-jones","website":null,"source_id":360573,"last_fetched":"2014-06-12T10:16:17Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=360573","api_link":"/indivBasicDetails.do?sid=360573","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:51Z","description":"Derek
+        John Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:51Z","url":null},{"created_at":"2013-12-12T07:28:51Z","description":"Derek
+        John Jones","service":"fsa","slug":"djj01040","updated_at":"2014-06-07T14:29:34Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=360573"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942386,"updated_at":"2014-06-12T10:16:48Z","source":"fsa","name":"Derek
+        Leslie Jones","source_slug":"568698","canonical_slug":"derek-jones","website":null,"source_id":568698,"last_fetched":"2014-06-12T10:16:45Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=568698","api_link":"/indivBasicDetails.do?sid=568698","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:29:03Z","description":"Derek
+        Leslie Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:29:03Z","url":null},{"created_at":"2013-12-12T07:29:03Z","description":"Derek
+        Leslie Jones","service":"fsa","slug":"dlj01043","updated_at":"2014-06-07T14:29:56Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=568698"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942387,"updated_at":"2014-06-12T10:16:43Z","source":"fsa","name":"Derek
+        Peter Jones","source_slug":"521125","canonical_slug":"derek-jones","website":null,"source_id":521125,"last_fetched":"2014-06-12T10:16:41Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=521125","api_link":"/indivBasicDetails.do?sid=521125","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:59Z","description":"Derek
+        Peter Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:59Z","url":null},{"created_at":"2013-12-12T07:28:59Z","description":"Derek
+        Peter Jones","service":"fsa","slug":"dpj01028","updated_at":"2014-06-07T14:29:52Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=521125"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942388,"updated_at":"2014-06-12T10:16:39Z","source":"fsa","name":"Derek
+        Powell Jones","source_slug":"370909","canonical_slug":"derek-jones","website":null,"source_id":370909,"last_fetched":"2014-06-12T10:16:37Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=370909","api_link":"/indivBasicDetails.do?sid=370909","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:28:52Z","description":"Derek
+        Powell Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:28:52Z","url":null},{"created_at":"2013-12-12T07:28:52Z","description":"Derek
+        Powell Jones","service":"fsa","slug":"dpj01022","updated_at":"2014-06-07T14:29:48Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=370909"}],"relationships":[],"funding_rounds":[],"links":[]},{"id":11942389,"updated_at":"2014-06-12T10:16:53Z","source":"fsa","name":"Derek
+        Robert Jones","source_slug":"720500","canonical_slug":"derek-jones","website":null,"source_id":720500,"last_fetched":"2014-06-12T10:16:50Z","source_created_at":null,"source_updated_at":null,"contact_type":"person","source_namespace":"indiv","page_link":"http://www.fsa.gov.uk/register/indivBasicDetails.do?sid=720500","api_link":"/indivBasicDetails.do?sid=720500","description":null,"name_is_common_phrase":false,"levenshtein_distance":0,"source_priority":6,"identities":[{"created_at":"2013-12-12T07:29:06Z","description":"Derek
+        Robert Jones","service":"avatar","slug":null,"updated_at":"2013-12-12T07:29:06Z","url":null},{"created_at":"2013-12-12T07:29:06Z","description":"Derek
+        Robert Jones","service":"fsa","slug":"drj01066","updated_at":"2014-06-07T14:30:00Z","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=720500"}],"relationships":[],"funding_rounds":[],"links":[]}],"name":"Derek
+        Jones","slug":"derek-jones","count":10,"version":"v1"}'
+    http_version: 
+  recorded_at: Wed, 27 Aug 2014 13:52:22 GMT
 recorded_with: VCR 2.9.2
