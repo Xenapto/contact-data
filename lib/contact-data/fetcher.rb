@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'rest-client'
+require 'contact-data/exception'
 
 module ContactData
   class Fetcher
@@ -55,13 +56,17 @@ module ContactData
 
         [
           :method, :url, :headers, :cookies, :payload, :user, :password, :timeout,
-          :max_redirects, :open_timeout, :raw_response, :processed_headers, :args,
+          :max_redirects, :open_timeout, :raw_response, :processed_headers,
           :ssl_opts, :verify_ssl, :ssl_client_cert, :ssl_client_key, :ssl_ca_file,
           :ssl_ca_path, :ssl_cert_store, :ssl_verify_callback,
           :ssl_verify_callback_warnings, :ssl_version, :ssl_ciphers
         ].each { |key| args[key] = options[key] if options.key? key }
 
-        RestClient::Request.new(args).execute
+        begin
+          RestClient::Request.new(args).execute
+        rescue RestClient::Exception => e
+          raise ContactData::FetchError, "#{e.message} when trying to #{method.to_s.upcase} url: #{url}", e.backtrace
+        end
       end
 
       def parse(json)
