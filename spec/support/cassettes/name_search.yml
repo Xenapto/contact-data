@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://public.xenapto.com/api/v2/search.json?name=Derek%20Jones%20III
+    uri: http://public.xenapto.com/api/v2/contacts/search.json?name=Derek%20Jones%20III
     body:
       encoding: US-ASCII
       string: ''
@@ -15,54 +15,44 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Date:
-      - Thu, 12 Jun 2014 10:59:45 GMT
+      - Tue, 11 Nov 2014 16:28:14 GMT
       Status:
-      - 404 Not Found
+      - 200 OK
       Connection:
       - close
       Content-Type:
-      - text/html; charset=utf-8
+      - application/json; charset=utf-8
       Content-Length:
-      - '728'
+      - '2650'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"987eaf76c45a1d317b3c8fad8f7e15d8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 90f7aaf2536951016e1548cce21ffc5f
+      - f04039bd77cd67d31d529101bc4642b9
       X-Runtime:
-      - '0.006338'
+      - '0.060992'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
-      string: |
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>The page you were looking for doesn't exist (404)</title>
-          <style type="text/css">
-            body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-            div.dialog {
-              width: 25em;
-              padding: 0 4em;
-              margin: 4em auto 0 auto;
-              border: 1px solid #ccc;
-              border-right-color: #999;
-              border-bottom-color: #999;
-            }
-            h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-          </style>
-        </head>
-
-        <body>
-          <!-- This file lives in public/404.html -->
-          <div class="dialog">
-            <h1>The page you were looking for doesn't exist.</h1>
-            <p>You may have mistyped the address or the page may have moved.</p>
-          </div>
-        </body>
-        </html>
+      string: '{"name":"Derek Jones III","slug":"derek-jones","version":"v2","identities":[{"contact_type":"person","description":null,"identity_slug":"derek-jones","service":"angel_list","url":"https://angel.co/derek-jones"},{"contact_type":"person","description":null,"identity_slug":"https://d1qb2nb5cznatu.cloudfront.net/users/165075-medium_jpg?1405505118","service":"avatar","url":"https://d1qb2nb5cznatu.cloudfront.net/users/165075-medium_jpg?1405505118"},{"contact_type":"person","description":null,"identity_slug":"dereknakano.com","service":"domain","url":"http://www.dereknakano.com"},{"contact_type":"person","description":"Derek
+        Andrew Jones","identity_slug":"daj01053","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=368843"},{"contact_type":"person","description":"Derek
+        John Jones","identity_slug":"djj01040","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=360573"},{"contact_type":"person","description":"Derek
+        Leslie Jones","identity_slug":"dlj01043","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=568698"},{"contact_type":"person","description":"Derek
+        Powell Jones","identity_slug":"dpj01022","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=370909"},{"contact_type":"person","description":"Derek
+        Peter Jones","identity_slug":"dpj01028","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=521125"},{"contact_type":"person","description":"Derek
+        Robert Jones","identity_slug":"drj01066","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=720500"},{"contact_type":"person","description":"Derek
+        Jones","identity_slug":"dxj00016","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=267093"},{"contact_type":"person","description":"Derek
+        Jones","identity_slug":"dxj00029","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=282759"},{"contact_type":"person","description":"Derek
+        Jones","identity_slug":"dxj01164","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=490042"},{"contact_type":"person","description":"Derek
+        Jones","identity_slug":"dxj01321","service":"fsa","url":"http://www.fsa.gov.uk/register//indivbasicdetails.do?sid=729794"},{"contact_type":"person","description":null,"identity_slug":"pub/derek-jones/15/b2/55b","service":"linked_in","url":"http://www.linkedin.com/pub/derek-jones/15/b2/55b"},{"contact_type":"person","description":null,"identity_slug":"http://www.dereknakano.com","service":"url","url":"http://www.dereknakano.com"}],"relationships":[],"links":[]}'
     http_version: 
-  recorded_at: Thu, 12 Jun 2014 10:59:45 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Tue, 11 Nov 2014 16:28:14 GMT
+recorded_with: VCR 2.9.3

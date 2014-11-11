@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls', '~> 0'
   spec.add_development_dependency 'vcr', '~> 2'
   spec.add_development_dependency 'webmock', '~> 1'
-  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'byebug', '~> 3'
 end

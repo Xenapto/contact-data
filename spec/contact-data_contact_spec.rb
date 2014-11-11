@@ -7,7 +7,10 @@ describe ContactData::Contact do
 
   it 'searches for a contact by name' do
     VCR.use_cassette('name_search') do
-      expect { ContactData::Contact.search(name, verbose: true) }.to raise_error(RestClient::ResourceNotFound)
+      result = ContactData::Contact.search(name, verbose: true)
+      expect(result).to be_a(Hash)
+      expect(result[:slug]).to eq('derek-jones')
+      expect(result[:identities].count).to eq(15)
     end
   end
 end
