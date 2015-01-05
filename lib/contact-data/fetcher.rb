@@ -51,6 +51,16 @@ module ContactData
 
       def fetch(url, method = :get, options = {})
         logger.info { "Using #{method.to_s.upcase} for #{url}" }
+        args = args_from url, method, options
+
+        begin
+          RestClient::Request.new(args).execute
+        rescue RestClient::Exception => e
+          raise ContactData::FetchError, "#{e.message} when trying to #{method.to_s.upcase} url: #{url}", e.backtrace
+        end
+      end
+
+      def args_from(url, method, options)
         args = { url: url, method: method }
         args[:headers] = { params: options[:params] } if options.key? :params
 
@@ -62,11 +72,7 @@ module ContactData
           :ssl_verify_callback_warnings, :ssl_version, :ssl_ciphers
         ].each { |key| args[key] = options[key] if options.key? key }
 
-        begin
-          RestClient::Request.new(args).execute
-        rescue RestClient::Exception => e
-          raise ContactData::FetchError, "#{e.message} when trying to #{method.to_s.upcase} url: #{url}", e.backtrace
-        end
+        args
       end
 
       def parse(json)
