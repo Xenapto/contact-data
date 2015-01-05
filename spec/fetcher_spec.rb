@@ -1,10 +1,10 @@
 # encoding: utf-8
 require 'spec_helper'
 require 'contact-data'
-require 'byebug'
 
 describe ContactData::Fetcher do
   let(:method) { 'method' }
+  let(:url) { ContactData::Fetcher::URL }
 
   it 'adds diagnostic information to a RestClient exception' do
     RestClient::Request.any_instance.stub(:execute).and_raise RestClient::InternalServerError.new(nil, 500)
@@ -14,5 +14,20 @@ describe ContactData::Fetcher do
       message = "500 Internal Server Error when trying to GET url: #{ContactData::Fetcher::URL}/#{method}.json"
       expect(e.message).to eq(message)
     }
+  end
+
+  it 'forms the expected URL' do
+    [
+      { method: method, options: {}, url: "#{url}/method.json" },
+      { method: :method, options: {}, url: "#{url}/api/v2/method.json" },
+      { method: :method, options: { base: 'base' }, url: "#{url}/api/v2/base/method.json" }
+    ].each do |url_data|
+      puts "#{url_data[:method].class}\t#{url_data[:options]}"
+      expect(
+        ContactData::Fetcher.__send__(
+          :get_url_from, url_data[:method], url_data[:options]
+        )
+      ).to eq(url_data[:url])
+    end
   end
 end
