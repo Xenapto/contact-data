@@ -9,6 +9,12 @@ module ContactData
         options[:params] = { name: name }
         Fetcher.get(:search, options)
       end
+
+      def from(source, slug, options = {})
+        options[:base] = BASE
+        options[:params] = { source: source, slug: slug }
+        Fetcher.get(:from, options)
+      end
     end
   end
 end

@@ -50,8 +50,9 @@ module ContactData
       end
 
       def fetch(url, method = :get, options = {})
-        logger.info { "Using #{method.to_s.upcase} for #{url}" }
         args = args_from url, method, options
+        logger.info { "Using #{method.to_s.upcase} for #{url}" }
+        logger.info { "Args: #{args}" }
 
         begin
           RestClient::Request.new(args).execute
