@@ -1,0 +1,2 @@
+module ContactData
+end
