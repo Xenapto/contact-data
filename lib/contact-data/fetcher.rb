@@ -4,9 +4,10 @@ require 'contact-data/exception'
 
 module ContactData
   class Fetcher
+<<<<<<< HEAD
     attr_reader :http_method, :api_method, :options
 
-    URL = 'http://public.xenapto.com'
+    URL = ENV['XENDATA_URL'] || 'http://public.xenapto.com'
     API = 'api/v2'
 
     LOGLEVEL = Logger::WARN
