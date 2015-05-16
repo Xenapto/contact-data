@@ -92,4 +92,136 @@ http_interactions:
         Assigned Numbers Authority","news_source":"Internet Assigned Numbers Authority","summary":null,"version":"v2"}'
     http_version: 
   recorded_at: Thu, 19 Jun 2014 12:24:59 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v2/info.json?url=http://iana.org
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 15 May 2015 10:32:21 GMT
+      Status:
+      - 404 Not Found
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=utf-8
+      Content-Length:
+      - '104'
+      X-Request-Id:
+      - 94f8f175-2999-48a5-8bf8-f6e1a9d77c35
+      X-Runtime:
+      - '0.029021'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <hash>
+          <status>404</status>
+          <error>Not Found</error>
+        </hash>
+    http_version: 
+  recorded_at: Fri, 15 May 2015 10:32:21 GMT
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v2/search.json?url=http://iana.org
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 15 May 2015 10:32:21 GMT
+      Status:
+      - 404 Not Found
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=utf-8
+      Content-Length:
+      - '104'
+      X-Request-Id:
+      - 40193489-7b00-43de-9ddc-fb3dfd8ad553
+      X-Runtime:
+      - '0.033578'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <hash>
+          <status>404</status>
+          <error>Not Found</error>
+        </hash>
+    http_version: 
+  recorded_at: Fri, 15 May 2015 10:32:22 GMT
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v2/links/search.json?timeout=600&url=http://iana.org
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 May 2015 16:53:17 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '275'
+      Etag:
+      - W/"5f92b5c3e45ff95137379acb2af9d325"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65be3337-1e8c-4bb2-8c2f-d12c47030df4
+      X-Runtime:
+      - '1.313432'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":["int","arpa","global-ip","_______","apply","an"],"mentions":[],"emails":[],"id":null,"url":"http://www.iana.org/","domain":"iana.org","title":"Internet
+        Assigned Numbers Authority","news_source":"Internet Assigned Numbers Authority","summary":null,"version":"v2"}'
+    http_version: 
+  recorded_at: Sat, 16 May 2015 16:53:17 GMT
+recorded_with: VCR 2.9.3

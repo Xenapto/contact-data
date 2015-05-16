@@ -1,31 +1,21 @@
 # encoding: utf-8
 module ContactData
   class Link
+    extend ContactData
     BASE = :links
 
     class << self
       def latest(params = {})
-        Fetcher.get :latest, options_from(params)
+        Fetcher.get :latest, params.to_options(BASE)
       end
 
       def info(params = {})
-        Fetcher.get :info, options_from(params)
+        Fetcher.get :info, params.to_options(BASE)
       end
 
       def search(params = {})
-        Fetcher.get :search, options_from(params)
-      end
-
-      private
-
-      def options_from(params = {})
-        options = { base: BASE }
-
-        params = { url: params } if params.is_a? String
-
-        options[:verbose] = params.delete(:verbose) if params.key? :verbose
-        options[:params]  = params unless params.empty?
-        options
+        params[:timeout] ||= 600 if params.is_a? Hash
+        Fetcher.get :search, params.to_options(BASE)
       end
     end
   end

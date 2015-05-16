@@ -1,3 +1,6 @@
+.DS_Store
+._*
+
 * Gem project, so don't check in:
 Gemfile.lock
 
