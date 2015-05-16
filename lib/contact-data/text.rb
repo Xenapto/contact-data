@@ -5,7 +5,7 @@ module ContactData
     BASE = :text
 
     def self.search(text = nil, params = {})
-      params[:timeout] ||= 600
+      params[:timeout] ||= 600 if params.is_a? Hash
       Fetcher.post :search, params.to_options(BASE, text)
     end
   end

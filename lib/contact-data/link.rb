@@ -14,7 +14,7 @@ module ContactData
       end
 
       def search(params = {})
-        params[:timeout] ||= 600
+        params[:timeout] ||= 600 if params.is_a? Hash
         Fetcher.get :search, params.to_options(BASE)
       end
     end

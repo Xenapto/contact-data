@@ -103,4 +103,107 @@ http_interactions:
         Williams","Intercom","Intercom.io"],"contact_types":["person","organization","organization"],"version":"v2"}'
     http_version: 
   recorded_at: Fri, 15 May 2015 12:52:12 GMT
+- request:
+    method: post
+    uri: http://public.xenapto.com/api/v2/text/search.json?timeout=600
+    body:
+      encoding: US-ASCII
+      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '673'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 May 2015 16:53:18 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '232'
+      Etag:
+      - W/"81b442e407e9c8bbac8308519c37a4e6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 96e353f2-b761-4d73-b545-32e26cb3a464
+      X-Runtime:
+      - '0.621095'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":["neue","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Neue","Intercom","Intercom.io"],"contact_types":["organization","organization","organization"],"version":"v2"}'
+    http_version: 
+  recorded_at: Sat, 16 May 2015 16:53:18 GMT
+- request:
+    method: post
+    uri: http://public.xenapto.com/api/v2/text/search.json?input_format=html&timeout=600
+    body:
+      encoding: US-ASCII
+      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '673'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 May 2015 16:53:18 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '242'
+      Etag:
+      - W/"bc904362c962aaeea2357476a1c2fbff"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0cf91fc1-46a5-44bf-9b26-eb52379ac788
+      X-Runtime:
+      - '0.190762'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":["max-williams","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Max
+        Williams","Intercom","Intercom.io"],"contact_types":["person","organization","organization"],"version":"v2"}'
+    http_version: 
+  recorded_at: Sat, 16 May 2015 16:53:18 GMT
 recorded_with: VCR 2.9.3
