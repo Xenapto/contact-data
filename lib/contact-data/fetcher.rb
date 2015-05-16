@@ -1,4 +1,6 @@
 # encoding: utf-8
+require 'logger'
+require 'json'
 require 'rest-client'
 require 'contact-data/exception'
 

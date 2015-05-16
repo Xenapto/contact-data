@@ -14,6 +14,7 @@ module ContactData
       end
 
       def search(params = {})
+        params[:timeout] ||= 600
         Fetcher.get :search, params.to_options(BASE)
       end
     end

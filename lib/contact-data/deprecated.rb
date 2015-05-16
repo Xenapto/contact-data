@@ -1,6 +1,4 @@
 # encoding: utf-8
-require 'string'
-
 module ContactData
   class Deprecated
     class << self
