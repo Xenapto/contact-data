@@ -30,4 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 1'
   spec.add_development_dependency 'byebug', '~> 4.0'
   spec.add_development_dependency 'rubocop', '~> 0.31'
+  spec.add_development_dependency 'guard', '~> 2.7'
+  spec.add_development_dependency 'guard-rspec', '~> 4.3'
+  spec.add_development_dependency 'guard-rubocop', '~> 1.2'
 end
