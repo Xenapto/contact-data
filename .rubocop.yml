@@ -42,3 +42,5 @@ FileName:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#snake-case-files'
   Enabled: false
 
+ExtraSpacing:
+  Enabled: true
