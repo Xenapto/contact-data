@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: http://public.xenapto.com/api/v2/text/search.json
+    uri: http://public.xenapto.com/api/v3/text/search.json?input_format=html&timeout=600
     body:
       encoding: US-ASCII
-      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
+      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40example.com%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40example.com%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%3E%40maxwilliams%3C%2Fspan%3E%0A
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '673'
+      - '703'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
@@ -22,48 +22,50 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - nginx/1.8.0
       Date:
-      - Fri, 15 May 2015 12:51:41 GMT
+      - Fri, 05 Jun 2015 12:20:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '180'
+      Connection:
+      - keep-alive
       Status:
       - 200 OK
-      Connection:
-      - close
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '232'
       Etag:
-      - W/"81b442e407e9c8bbac8308519c37a4e6"
+      - W/"884828ad4edaa8801971ebd6f8b18ab1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a424d7e-5a82-4d0e-8b8c-8b5d1b0697ef
+      - bdba84f1-1265-44c0-ab65-2af12d5483c3
       X-Runtime:
-      - '0.401147'
+      - '0.159947'
     body:
       encoding: UTF-8
-      string: '{"contacts":["neue","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Neue","Intercom","Intercom.io"],"contact_types":["organization","organization","organization"],"version":"v2"}'
+      string: '{"contacts":[{"name":"Max Williams","contact_type":"person","slug":"max-williams","in_title":null}],"mentions":["maxwilliams"],"emails":["max.williams@example.com"],"version":"v3"}'
     http_version: 
-  recorded_at: Fri, 15 May 2015 12:51:41 GMT
+  recorded_at: Fri, 05 Jun 2015 12:20:46 GMT
 - request:
     method: post
-    uri: http://public.xenapto.com/api/v2/text/search.json?input_format=html
+    uri: http://public.xenapto.com/api/v3/text/search.json?timeout=600
     body:
       encoding: US-ASCII
-      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
+      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40example.com%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40example.com%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%3E%40maxwilliams%3C%2Fspan%3E%0A
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '673'
+      - '703'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
@@ -73,49 +75,50 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - nginx/1.8.0
       Date:
-      - Fri, 15 May 2015 12:52:12 GMT
+      - Fri, 05 Jun 2015 12:20:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '170'
+      Connection:
+      - keep-alive
       Status:
       - 200 OK
-      Connection:
-      - close
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '242'
       Etag:
-      - W/"bc904362c962aaeea2357476a1c2fbff"
+      - W/"3dc4842a6efae6fc7ebfd855e27fe1c7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d703a761-c166-4bab-be73-9eab49cc131a
+      - 8aad956f-85ef-4d95-b666-ea266433365b
       X-Runtime:
-      - '0.118948'
+      - '0.686420'
     body:
       encoding: UTF-8
-      string: '{"contacts":["max-williams","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Max
-        Williams","Intercom","Intercom.io"],"contact_types":["person","organization","organization"],"version":"v2"}'
+      string: '{"contacts":[{"name":"Neue","contact_type":"organization","slug":"neue","in_title":null}],"mentions":["maxwilliams"],"emails":["max.williams@example.com"],"version":"v3"}'
     http_version: 
-  recorded_at: Fri, 15 May 2015 12:52:12 GMT
+  recorded_at: Fri, 05 Jun 2015 12:20:48 GMT
 - request:
     method: post
-    uri: http://public.xenapto.com/api/v2/text/search.json?timeout=600
+    uri: http://public.xenapto.com/api/v3/text/search.json?input_format=html&timeout=600&title=Re:%20Sherry%20Coutu
     body:
       encoding: US-ASCII
-      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
+      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40example.com%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40example.com%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%3E%40maxwilliams%3C%2Fspan%3E%0A
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '673'
+      - '703'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
@@ -125,85 +128,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - nginx/1.8.0
       Date:
-      - Sat, 16 May 2015 16:53:18 GMT
+      - Fri, 05 Jun 2015 12:20:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '267'
+      Connection:
+      - keep-alive
       Status:
       - 200 OK
-      Connection:
-      - close
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '232'
       Etag:
-      - W/"81b442e407e9c8bbac8308519c37a4e6"
+      - W/"a0df7611ab6720bebc1e143abe039427"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 96e353f2-b761-4d73-b545-32e26cb3a464
+      - ab840e41-87a4-468f-822d-5ff2a0636147
       X-Runtime:
-      - '0.621095'
+      - '0.200528'
     body:
       encoding: UTF-8
-      string: '{"contacts":["neue","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Neue","Intercom","Intercom.io"],"contact_types":["organization","organization","organization"],"version":"v2"}'
+      string: '{"contacts":[{"name":"Max Williams","contact_type":"person","slug":"max-williams","in_title":false},{"name":"Sherry
+        Coutu","contact_type":"person","slug":"sherry-coutu","in_title":true}],"mentions":["maxwilliams"],"emails":["max.williams@example.com"],"version":"v3"}'
     http_version: 
-  recorded_at: Sat, 16 May 2015 16:53:18 GMT
-- request:
-    method: post
-    uri: http://public.xenapto.com/api/v2/text/search.json?input_format=html&timeout=600
-    body:
-      encoding: US-ASCII
-      string: text=%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%20color%3Argba(0%2C%200%2C%200%2C%201.0)%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3E%3Cb%20class%3D%22%22%3EFrom%3A%20%3C%2Fb%3E%3C%2Fspan%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22font-family%3A%20-webkit-system-font%2C%20Helvetica%20Neue%2C%20Helvetica%2C%20sans-serif%3B%22%0A%20%20%20%20%20%20class%3D%22%22%3EMax%20Williams%3Ca%20href%3D%22mailto%3Amax.williams%40pusher-4.mail.intercom.io%22%0A%20%20%20%20%20%20class%3D%22%22%3Emax.williams%40pusher-4.mail.intercom.io%3C%2Fa%3E%26gt%3B%3Cbr%20class%3D%22%22%3E%3C%2Fspan%3E%0A
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      Content-Length:
-      - '673'
-      Content-Type:
-      - application/x-www-form-urlencoded
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 16 May 2015 16:53:18 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '242'
-      Etag:
-      - W/"bc904362c962aaeea2357476a1c2fbff"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0cf91fc1-46a5-44bf-9b26-eb52379ac788
-      X-Runtime:
-      - '0.190762'
-    body:
-      encoding: UTF-8
-      string: '{"contacts":["max-williams","intercom","intercom-io"],"mentions":[],"emails":["max.williams@pusher-4.mail.intercom.io"],"names":["Max
-        Williams","Intercom","Intercom.io"],"contact_types":["person","organization","organization"],"version":"v2"}'
-    http_version: 
-  recorded_at: Sat, 16 May 2015 16:53:18 GMT
+  recorded_at: Fri, 05 Jun 2015 12:20:48 GMT
 recorded_with: VCR 2.9.3

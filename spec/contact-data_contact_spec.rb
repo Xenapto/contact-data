@@ -3,9 +3,9 @@ require 'spec_helper'
 require 'contact-data'
 
 describe ContactData::Contact do
-  let(:name)    { 'Derek Jones III' }
-  let(:source)  { 'angel_list' }
-  let(:slug)    { 'derek-jones' }
+  let(:name) { 'Derek Jones III' }
+  let(:source) { 'angel_list' }
+  let(:slug) { 'derek-jones' }
 
   it 'searches for a contact by name' do
     VCR.use_cassette('name_search') do
