@@ -9,7 +9,7 @@ module ContactData
     attr_reader :http_method, :api_method, :options
 
     URL = ENV['XENDATA_URL'] || 'http://public.xenapto.com'
-    API = 'api/v2'
+    API = 'api/v2'.freeze
 
     LOGLEVEL = Logger::WARN
 
@@ -28,13 +28,7 @@ module ContactData
 
     def url
       return @url if @url
-
-      if api_method.is_a?(String)
-        @url = "#{url_base}/#{api_method}"
-      else
-        @url = "#{api_base}/#{method_base}#{api_method}"
-      end
-
+      @url = api_method.is_a?(String) ? "#{url_base}/#{api_method}" : "#{api_base}/#{method_base}#{api_method}"
       @url = "#{@url}.#{options[:format] || :json}" unless options[:noformat]
       @url
     end
@@ -68,7 +62,7 @@ module ContactData
       return @json if @json
       logger.info { "Using #{display_method} for #{url}" }
       @json = RestClient::Request.new(args).execute
-    rescue RestClient::Exception => e
+    rescue RestClient::Exception, SocketError => e
       raise ContactData::FetchError, "#{e.message} when trying to #{display_method} url: #{url}", e.backtrace
     end
 

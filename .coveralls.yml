@@ -1,0 +1,3 @@
+notify:
+  webhooks:
+    - url: https://coveralls.io/webhook?repo_token=eM9kX6uXHQQVaRCL3Oerbfn7BLuifapdU
