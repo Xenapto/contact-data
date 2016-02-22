@@ -1,11 +1,9 @@
 # The contact-data gem
 
-[![Join the chat at https://gitter.im/Xenapto/contact-data](https://badges.gitter.im/Xenapto/contact-data.svg)](https://gitter.im/Xenapto/contact-data?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ![Gem Version](http://img.shields.io/gem/v/contact-data.svg?style=flat)&nbsp;[![Code Climate](http://img.shields.io/codeclimate/github/Xenapto/contact-data.svg?style=flat)](https://codeclimate.com/github/Xenapto/contact-data)&nbsp;[![Coverage Status](https://img.shields.io/coveralls/Xenapto/contact-data.svg?style=flat)](https://coveralls.io/r/Xenapto/contact-data?branch=master)
 [![security](https://hakiri.io/github/Xenapto/contact-data/develop.svg)](https://hakiri.io/github/Xenapto/contact-data/develop)
 ![build status](https://circleci.com/gh/Xenapto/contact-data.png?style=shield&circle-token=4c6f3dcc1912d30c8d903ae767f0beee94d9b4e2)
-[![Developer status](http://img.shields.io/badge/developer-awesome-brightgreen.svg)](http://xenapto.com)
+[![Developer status](http://img.shields.io/badge/developer-awesome-brightgreen.svg)](http://xenapto.com) [![Join the chat at https://gitter.im/Xenapto/contact-data](https://badges.gitter.im/Xenapto/contact-data.svg)](https://gitter.im/Xenapto/contact-data?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Retrieves information about people and organizations from http://public.xenapto.com
 
