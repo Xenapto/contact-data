@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v3/contacts/from_domain.json?domain=anthemis.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 14 Apr 2016 11:16:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"759b5d9178f77e2a2d0fa75ee4897054"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a791012-1cdc-464f-b602-9a51c8c7b7c2
+      X-Runtime:
+      - '0.067825'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":[{"name":"Anthemis Group","contact_type":"organization","slug":"anthemis-group"}],"domain":"anthemis.com","contact_type":"organization","version":"v3"}'
+    http_version: 
+  recorded_at: Thu, 14 Apr 2016 11:16:30 GMT
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v3/contacts/from_domain.json?contact_type=person&domain=anthemis.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 14 Apr 2016 11:19:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"a74f008fdc1690a80e0adce9f1c52034"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b67d5255-188a-431a-8ef6-8e72cf78096d
+      X-Runtime:
+      - '0.046081'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":[{"name":"Sean Park","contact_type":"person","slug":"sean-park"}],"domain":"anthemis.com","contact_type":"person","version":"v3"}'
+    http_version: 
+  recorded_at: Thu, 14 Apr 2016 11:19:36 GMT
+- request:
+    method: get
+    uri: http://public.xenapto.com/api/v3/contacts/from_domain.json?contact_type=all&domain=anthemis.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 14 Apr 2016 11:20:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '218'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"333d258d54d925cc51c6a0de5510466c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f13a260a-ce8a-4a78-bce2-93e889be0241
+      X-Runtime:
+      - '0.135487'
+    body:
+      encoding: UTF-8
+      string: '{"contacts":[{"name":"Anthemis Group","contact_type":"organization","slug":"anthemis-group"},{"name":"Sean
+        Park","contact_type":"person","slug":"sean-park"}],"domain":"anthemis.com","contact_type":"all","version":"v3"}'
+    http_version: 
+  recorded_at: Thu, 14 Apr 2016 11:20:31 GMT
+recorded_with: VCR 2.9.3
