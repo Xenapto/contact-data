@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rest-client', '~> 1'
   spec.add_runtime_dependency 'addressable', '~> 2.3'
 
-  spec.add_development_dependency 'rake', '~> 10.4'
+  spec.add_development_dependency 'rake', '~> 11'
   spec.add_development_dependency 'rspec', '~> 3.2'
   spec.add_development_dependency 'gem-release', '~> 0.7'
   spec.add_development_dependency 'simplecov', '~> 0.10'
