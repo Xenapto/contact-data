@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 1.21'
   spec.add_development_dependency 'byebug', '~> 5.0'
   spec.add_development_dependency 'rubocop', '~> 0.31'
+  spec.add_development_dependency 'listen', '~> 3.0', '< 3.1' # Dependency of guard, 3.1 requires Ruby 2.2+
   spec.add_development_dependency 'guard', '~> 2.12'
   spec.add_development_dependency 'guard-rspec', '~> 4.5'
   spec.add_development_dependency 'guard-rubocop', '~> 1.2'
