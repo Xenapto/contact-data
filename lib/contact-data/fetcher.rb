@@ -63,7 +63,8 @@ module ContactData
       logger.info { "Using #{display_method} for #{url}" }
       @json = RestClient::Request.new(args).execute
     rescue RestClient::Exception, SocketError, Net::HTTPBadGateway => e
-      raise ContactData::FetchError, "#{e.message} when trying to #{display_method} url: #{url} with options #{options}", e.backtrace
+      message = "#{e.message} when trying to #{display_method} url: #{url} with options #{options}"
+      raise ContactData::FetchError, message, e.backtrace
     end
 
     def args
@@ -76,7 +77,7 @@ module ContactData
         :method, :url, :headers, :cookies, :payload, :user, :password, :timeout, :max_redirects, :open_timeout,
         :raw_response, :processed_headers, :ssl_opts, :verify_ssl, :ssl_client_cert, :ssl_client_key, :ssl_ca_file,
         :ssl_ca_path, :ssl_cert_store, :ssl_verify_callback, :ssl_verify_callback_warnings, :ssl_version, :ssl_ciphers
-      ].each { |key| @args[key] = options[key] if options.key? key } # TODO: surely this is just a merge? (what was I thinking?)
+      ].each { |key| @args[key] = options[key] if options.key? key } # TODO: surely this is just a merge?
 
       @args
     end

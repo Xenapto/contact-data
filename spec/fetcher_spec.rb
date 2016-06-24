@@ -12,7 +12,8 @@ describe ContactData::Fetcher do
 
     expect { ContactData::Fetcher.get(method) }.to raise_error { |e|
       expect(e).to be_an(ContactData::FetchError)
-      message = "500 Internal Server Error when trying to GET url: #{ContactData::Fetcher::URL}/#{method}.json"
+      message = '500 Internal Server Error when trying to GET ' \
+                "url: #{ContactData::Fetcher::URL}/#{method}.json with options {}"
       expect(e.message).to eq(message)
     }
   end
