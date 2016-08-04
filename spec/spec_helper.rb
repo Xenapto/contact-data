@@ -2,7 +2,7 @@
 require 'simplecov'
 require 'coveralls'
 SimpleCov.start
-Coveralls.wear!('rails') if ENV['COVERALLS_REPO_TOKEN']
+Coveralls.wear! if ENV['COVERALLS_REPO_TOKEN']
 
 require 'contact-data'
 
