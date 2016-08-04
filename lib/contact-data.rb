@@ -1,6 +1,7 @@
 # encoding: utf-8
 # frozen_string_literal: true
 require 'contact-data/contact'
+require 'contact-data/identity'
 require 'contact-data/link'
 require 'contact-data/text'
 require 'contact-data/fetcher'
