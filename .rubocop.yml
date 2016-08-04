@@ -22,23 +22,19 @@ Output:
   Enabled: true
 
 ExtraSpacing:
-  Enabled: false
-
-FileName:
-  Description: 'Use snake_case for source file names.'
-  Enabled: true
-
-Eval:
-  Enabled: false
-
-LineLength:
-  Max: 120
   Enabled: true
 
 FileName:
   Description: 'Use snake_case for source file names.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#snake-case-files'
   Enabled: false
+
+Eval:
+  Enabled: true
+
+LineLength:
+  Max: 120
+  Enabled: true
 
 ExtraSpacing:
   Enabled: true
