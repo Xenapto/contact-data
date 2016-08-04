@@ -1,8 +1,5 @@
 # encoding: utf-8
 # frozen_string_literal: true
-require 'spec_helper'
-require 'contact-data'
-
 describe ContactData::Link do
   let(:url) { 'http://iana.org' }
 
@@ -15,7 +12,7 @@ describe ContactData::Link do
 
   it 'gets metadata about a url' do
     VCR.use_cassette('links_info_search') do
-      result = ContactData::Link.search url: url, verbose: true
+      result = ContactData::Link.search url: url # , verbose: true
       expect(result).to be_a(Hash)
     end
   end
@@ -29,7 +26,7 @@ describe ContactData::Link do
 
   it 'gets metadata & contact from a url' do
     VCR.use_cassette('links_info_search') do
-      result = ContactData::Link.info url: url, verbose: true
+      result = ContactData::Link.info url: url # , verbose: true
       expect(result).to be_a(Hash)
     end
   end

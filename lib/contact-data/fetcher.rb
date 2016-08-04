@@ -23,7 +23,7 @@ module ContactData
     end
 
     def parsed_json
-      logger.info { "Parsing #{json.length} characters of JSON" }
+      logger.debug { "Parsing #{json.length} characters of JSON" }
       JSON.parse(json, symbolize_names: true, allow_nan: true)
     end
 
@@ -61,7 +61,7 @@ module ContactData
 
     def json
       return @json if @json
-      logger.info { "Using #{display_method} for #{url}" }
+      logger.debug { "Using #{display_method} for #{url}" }
       @json = RestClient::Request.new(args).execute
     rescue RestClient::Exception, SocketError, Net::HTTPBadGateway => e
       message = "#{e.message} when trying to #{display_method} url: #{url} with options #{options}"

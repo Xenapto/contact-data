@@ -1,8 +1,5 @@
 # encoding: utf-8
 # frozen_string_literal: true
-require 'spec_helper'
-require 'contact-data'
-
 describe ContactData::Text do
   let(:text) do
     <<-HTML
@@ -17,7 +14,7 @@ describe ContactData::Text do
 
   it 'gets metadata about text' do
     VCR.use_cassette('text_search') do
-      result = ContactData::Text.search text, verbose: true
+      result = ContactData::Text.search text # , verbose: true
       expect(result).to be_a(ContactData::Text::Results)
       expect(result.slugs).to include('neue')
       expect(result.slugs_and_mentions).not_to include('max-williams')
@@ -27,7 +24,7 @@ describe ContactData::Text do
 
   it 'gets metadata about html, correctly identifying the text elements' do
     VCR.use_cassette('text_search') do
-      result = ContactData::Text.search text, input_format: :html, verbose: true
+      result = ContactData::Text.search text, input_format: :html # , verbose: true
       expect(result).to be_a(ContactData::Text::Results)
       expect(result.slugs).not_to include('neue')
       expect(result.slugs_and_mentions).to include('max-williams', 'maxwilliams')
@@ -37,7 +34,7 @@ describe ContactData::Text do
 
   it 'gets metadata about html, correctly identifying the text & title elements' do
     VCR.use_cassette('text_search') do
-      result = ContactData::Text.search text, input_format: :html, verbose: true, title: 'Re: Sherry Coutu'
+      result = ContactData::Text.search text, input_format: :html, title: 'Re: Sherry Coutu' # , verbose: true
       expect(result).to be_a(ContactData::Text::Results)
       expect(result.slugs).not_to include('neue')
       expect(result.slugs_and_mentions).to include('max-williams', 'maxwilliams', 'sherry-coutu')

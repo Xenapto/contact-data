@@ -1,8 +1,5 @@
 # encoding: utf-8
 # frozen_string_literal: true
-require 'spec_helper'
-require 'contact-data'
-
 describe ContactData::Fetcher do
   let(:method) { 'method' }
   let(:url) { ContactData::Fetcher::URL }
@@ -26,7 +23,7 @@ describe ContactData::Fetcher do
       { method: :method, options: { base: 'base' }, url: "#{url}/api/v2/base/method.json" },
       { method: :method, options: { url_base: url2 }, url: "#{url2}/api/v2/method.json" }
     ].each do |url_data|
-      puts "#{url_data[:method].class}\t#{url_data[:options]}"
+      # puts "#{url_data[:method].class}\t#{url_data[:options]}"
       expect(
         ContactData::Fetcher.new(
           :get, url_data[:method], url_data[:options]

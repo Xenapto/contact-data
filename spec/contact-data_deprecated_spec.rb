@@ -1,8 +1,5 @@
 # encoding: utf-8
 # frozen_string_literal: true
-require 'spec_helper'
-require 'contact-data'
-
 describe ContactData::Deprecated do
   let(:name) { 'Derek Jones III' }
   let(:name_xml_bug) { 'XXXXXXXXXX ?' }
