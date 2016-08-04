@@ -1,4 +1,5 @@
 # encoding: utf-8
+# frozen_string_literal: true
 require 'logger'
 require 'json'
 require 'rest-client'
@@ -9,7 +10,7 @@ module ContactData
     attr_reader :http_method, :api_method, :options
 
     URL = ENV['XENDATA_URL'] || 'http://public.xenapto.com'
-    API = 'api/v2'.freeze
+    API = 'api/v2'
 
     LOGLEVEL = Logger::WARN
 

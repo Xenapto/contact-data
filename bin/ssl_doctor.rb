@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 # Usage: ruby doctor.rb [HOST=status.github.com[:PORT=443]]
 require 'rbconfig'
 require 'net/https'
