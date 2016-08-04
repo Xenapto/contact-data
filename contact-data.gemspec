@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files = spec.files.grep(%r{^(test|spec|features|coverage)\/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'rest-client', '~> 1', '>= 1.8' # https://github.com/rest-client/rest-client/issues/369
+  spec.add_runtime_dependency 'rest-client', '~> 1.8' # https://github.com/rest-client/rest-client/issues/369
   spec.add_runtime_dependency 'addressable', '~> 2.3'
 
   spec.add_development_dependency 'rake', '~> 11'
