@@ -6,13 +6,11 @@ module ContactData
 
       attr_reader :text, :params, :raw
 
-      BASE = :text
-
       def initialize(t, p = {})
         @text = t
         @params = p
 
-        @raw = Fetcher.post :search, params.to_options(BASE, text)
+        @raw = Fetcher.post :search, params.to_options(Text::BASE, text)
       end
 
       def contacts

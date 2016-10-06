@@ -4,13 +4,22 @@ require 'contact-data/text/results'
 
 module ContactData
   class Text
-    def self.search(text = nil, params = {})
-      if params.is_a? Hash
-        params[:timeout] ||= 600
-        params[:api_base] ||= 'api/v3'
+    BASE = :text
+
+    class << self
+      def search(text = nil, params = {})
+        if params.is_a? Hash
+          params[:timeout] ||= 600
+          params[:api_base] ||= 'api/v3'
+        end
+
+        Results.new text, params
       end
 
-      Results.new text, params
+      def common_phrase(raw_params = {})
+        params = raw_params.is_a?(String) ? { name: raw_params } : raw_params
+        Fetcher.get :commmon_phrase, params.to_options(BASE)
+      end
     end
   end
 end
