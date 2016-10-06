@@ -18,6 +18,7 @@ module ContactData
 
       def common_phrase(raw_params = {})
         params = raw_params.is_a?(String) ? { name: raw_params } : raw_params
+        params[:api_base] ||= 'api/v3'
         Fetcher.get :commmon_phrase, params.to_options(BASE)
       end
     end
