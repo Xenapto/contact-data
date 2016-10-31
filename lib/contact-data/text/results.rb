@@ -25,12 +25,20 @@ module ContactData
         @slugs ||= contacts.map { |c| c[:slug] }
       end
 
+      def uncommon_slugs
+        @slugs ||= contacts.select { |c| c[:common_phrase] == true }.map { |c| c[:slug] }
+      end
+
       def mentions
         @mentions ||= raw[:mentions]
       end
 
       def slugs_and_mentions
         @slugs_and_mentions ||= (slugs | mentions)
+      end
+
+      def uncommon_slugs_and_mentions
+        @slugs_and_mentions ||= (uncommon_slugs | mentions)
       end
 
       def title_contacts
